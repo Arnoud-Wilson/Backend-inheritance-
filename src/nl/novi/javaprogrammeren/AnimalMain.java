@@ -1,5 +1,7 @@
 package nl.novi.javaprogrammeren;
 
+import nl.novi.javaprogrammeren.overerving.*;
+
 public class AnimalMain {
     /*
     Het is traditie om overerving uit te leggen met behulp van dieren. Hier ontkomen jullie dus ook niet aan.
@@ -15,6 +17,7 @@ public class AnimalMain {
     herkomst op. Ook willen we het aantal strepen weten.
 
     Van een Hond slaan we naam, naam van het baasje, favoriete voedselmerk, geslacht en soort op.
+
     Van een Kat slaan we de naam, naam van het baasje, favoriete voedsel merk, geslacht en soort op. Ook willen we weten
     of het een binnen of buitenkat is.
 
@@ -34,4 +37,19 @@ public class AnimalMain {
 
      */
 
+    public static void main(String[] args) {
+
+        Animal finny = new Dog("Finny", "male", "Arnoud", "Everything");
+        Animal moufasa = new Lion(0, "Moufasa", "male", "Jungle cage", "Africa", "Monday");
+        Animal garfield = new Cat(false, "Garfield", "male", "Jon", "Whiskas");
+        Animal lilly = new Tiger("Lilly", "female", "Zoo cage", "Africa", "thuesday", 23);
+        Animal bor = new Wolf("Fabeltjeskrant", "Bor", "male", "fabel cage", "North-america", "wednesday");
+
+        finny.move();
+        moufasa.makeSound();
+        garfield.sleep();
+        System.out.println(lilly.getSex());
+        System.out.println(bor.getName());
+    }
 }
+
